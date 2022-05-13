@@ -19,7 +19,6 @@ INPUT_PARAMS = [
     "INPUT_CREATE",
     "INPUT_WAIT_FOR_RESULTS",
     "INPUT_MODEL_NAME",
-    "INPUT_BRANCH_NAME",
 ]
 
 
@@ -78,7 +77,6 @@ def test_execute_command_kla():
     assert 31 == execute_command(
         f"{agent} --user TEST --pass TEST --sourcePath . --softwareName TEST"
     )
-    shutil.rmtree(test_output_dir)
 
 
 def check_var_works(name):

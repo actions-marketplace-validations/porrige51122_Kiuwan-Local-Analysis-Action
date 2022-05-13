@@ -17,7 +17,6 @@ INPUT_PARAMS = [
     ["CREATE", "--create"],
     ["WAIT_FOR_RESULTS", "--wait-for-results"],
     ["MODEL_NAME", "--model-name"],
-    ["BRANCH_NAME", "--branch-name"],
 ]
 
 

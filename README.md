@@ -1,44 +1,15 @@
---user
-Kiuwan username
+# Kiuwan Local Analysis Action
 
---pass
-Kiuwan password
+This is a github action that runs the Kiuwan Local Analyzer (KLA) for your repository.
 
---sourcePath
-Directory with code to analyze
-
---softwareName
-Name of the target application
-
---create
-Create software at kiuwan service if not exists
-
---label
-Label for the analysis
-
---model-name
-The model name to use when analyzing
-
---analysis-scope
-The analysis scope. One of [baseline|completeDelivery|partialDelivery].
-Defaults to baseline.
-
---change-request
-The change request associated with the delivery to analyze or promote
-(implies -as completeDelivery if no other option is specified)
-
---change-request-status
-The change request status. One of [inprogress|resolved]. Defaults to
-resolved. Only applies to delivery scopes
-
---branch-name
-The branch name associated with the delivery to analyze (implies --analysis-scope
-completeDelivery if no other option is specified)
-
---promote-to-baseline
-Promotes a single delivery to baseline (-n, -l and -cr must be specified) or all pending deliveries (-n must be specified)
-Default: false
-
---wait-for-results
-Wait for kiuwan to return complete results once the local analysis has finished
-Default: false
+| Parameter Name | Kiuwan Input | Description | Required |
+| -- | -- | -- | -- |
+| USER | --user | Kiuwan username | ✓ |
+| PASS | --pass | Kiuwan password | ✓
+| SOURCE_PATH | --sourcePath | Directory with code to analyze | ✓ |
+| SOFTWARE_NAME | --softwareName | Name of the target application | ✓ |
+| DOMAIN_ID | --domain-id | Domain identifier to use when authenticating |
+| LABEL | --label | Label for the analysis |
+| CREATE | --create | Create software at kiuwan service if not exists |
+| WAIT_FOR_RESULTS | --wait-for-results | Wait for kiuwan to return complete results once the local analysis has finished. |
+| MODEL_NAME | --model-name | The model name to use when analyzing |

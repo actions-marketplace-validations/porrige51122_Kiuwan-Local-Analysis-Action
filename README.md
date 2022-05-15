@@ -2,7 +2,7 @@
 
 This is a GitHub action that runs the Kiuwan Local Analyzer (KLA) on your repository.
 
-This is not created by Kiuwan due to (as of this release), they do not provide a GitHub action which does this function.
+This is not created by Kiuwan (as of this release) as they do not provide a GitHub action which does this function.
 Therefore please check the source code and use this action sensibly to prevent any security risks.
 
 ## Parameters

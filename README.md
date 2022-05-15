@@ -13,3 +13,7 @@ This is a github action that runs the Kiuwan Local Analyzer (KLA) for your repos
 | CREATE | --create | Create software at kiuwan service if not exists |
 | WAIT_FOR_RESULTS | --wait-for-results | Wait for kiuwan to return complete results once the local analysis has finished. |
 | MODEL_NAME | --model-name | The model name to use when analyzing |
+
+Project inspired, and modified from: lsacera/KiuwanBaselineAction but has been
+updated in the aim of making it more secure, faster, and more modifyable for the
+future

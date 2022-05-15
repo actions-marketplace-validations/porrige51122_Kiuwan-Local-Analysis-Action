@@ -5,31 +5,39 @@ inputs:
   user:
     description: 'Kiuwan Username'
     required: true
+    default: ''
   pass:
     description: 'Kiuwan Password'
     required: true
+    default: ''
   source_path:
     description: 'Directory with the code to analyze'
     required: false
-    default: "."
+    default: '.'
   software_name:
     description: 'Name of the target application'
     required: true
+    default: ''
   domain_id:
     description: 'Domain identifier to use when authenticating'
     required: false
+    default: ''
   label:
     description: 'Label for the analysis'
     required: false
+    default: ''
   create:
     description: 'Create software at kiuwan service if it doesn't exist'
     required: false
+    default: ''
   wait_for_results:
     description: 'Wait for kiuwan to return complete results once the local analysis has finished'
     required: false
+    default: ''
   model_name:
     description: 'The model name to use when analyzing'
     required: false
+    default: ''
 
 outputs:
   result:

@@ -62,16 +62,24 @@ steps:
 
 ## Notes
 
-Passwords stored in github secrets with special characters such as "$", are not well propagated and will cause errors.
+To prevent parameter injection, all inputs have been sanitized to the regex:
+```
+[^a-zA-Z0-9_!@#%*-]
+# All letters a-z, A-z. All numbers 0-9. _ and - characters.
+```
+This prevents Special Characters:
+```
+&
+;
+Newline (0x0a or \n)
+&&
+|
+||
+command `
+$(command )
+```
 
-You can escape the character in the github secret to solve this issue e.g:
-```sh
-pas$word
-```
-to
-```sh
-pas\$word
-```
+This protection includes passwords, therefore if errors occur, please make sure your password is within this regex.
 
 ## Acknowledgments
 

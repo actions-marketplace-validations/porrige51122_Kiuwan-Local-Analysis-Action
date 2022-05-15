@@ -6,6 +6,7 @@ import io
 import os
 import subprocess
 import sys
+import re
 
 INPUT_PARAMS = [
     ["USER", "--user"],
@@ -41,9 +42,10 @@ def execute_command(cmd):
 def build_kla_parameters():
     print("Building parameters...")
     cmd_parameters = ""
+    filter = "[^a-zA-Z0-9_!@#%*-]"
     for param in INPUT_PARAMS:
         try:
-            env = os.environ[f"INPUT_{param[0]}"]
+            env = re.sub(filter, "", os.environ[f"INPUT_{param[0]}"])
             if env != "":
                 cmd_parameters += f"{param[1]} {env}"
         except KeyError:

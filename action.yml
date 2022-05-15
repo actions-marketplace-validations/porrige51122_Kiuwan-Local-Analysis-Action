@@ -1,0 +1,44 @@
+name: 'Kiuwan Baseline Analysis'
+author: 'Kiuwan'
+description: 'Run Kiuwan Baseline analysis on the repository executing the action'
+inputs:
+  user:
+    description: 'Kiuwan Username'
+    required: true
+  pass:
+    description: 'Kiuwan Password'
+    required: true
+  source_path:
+    description: 'Directory with the code to analyze'
+    required: false
+    default: "."
+  software_name:
+    description: 'Name of the target application'
+    required: true
+  domain_id:
+    description: 'Domain identifier to use when authenticating'
+    required: false
+  label:
+    description: 'Label for the analysis'
+    required: false
+  create:
+    description: 'Create software at kiuwan service if it doesn't exist'
+    required: false
+  wait_for_results:
+    description: 'Wait for kiuwan to return complete results once the local analysis has finished'
+    required: false
+  model_name:
+    description: 'The model name to use when analyzing'
+    required: false
+
+outputs:
+  result:
+    description: 'Return code of the execution of kiuwan'
+
+branding:
+  color: 'green'
+  icon: 'code'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

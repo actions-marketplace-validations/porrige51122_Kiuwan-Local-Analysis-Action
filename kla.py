@@ -29,6 +29,7 @@ def main():
     os.chmod(agent, 0x777)
     cmd_params = build_kla_parameters()
     return_code = execute_command(f"{agent} {cmd_params}")
+    print(f"::set-output name=result::{return_code}")
 
 
 def execute_command(cmd):

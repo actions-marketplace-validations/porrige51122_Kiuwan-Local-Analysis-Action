@@ -6,7 +6,7 @@ This is a github action that runs the Kiuwan Local Analyzer (KLA) for your repos
 | -- | -- | -- | -- |
 | USER | --user | Kiuwan username | ✓ |
 | PASS | --pass | Kiuwan password | ✓
-| SOURCE_PATH | --sourcePath | Directory with code to analyze | ✓ |
+| SOURCE_PATH | --sourcePath | Directory with code to analyze |   |
 | SOFTWARE_NAME | --softwareName | Name of the target application | ✓ |
 | DOMAIN_ID | --domain-id | Domain identifier to use when authenticating |
 | LABEL | --label | Label for the analysis |

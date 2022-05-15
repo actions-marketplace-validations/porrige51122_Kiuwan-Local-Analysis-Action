@@ -1,6 +1,6 @@
-name: 'Kiuwan Baseline Analysis'
-author: 'Kiuwan'
-description: 'Run Kiuwan Baseline analysis on the repository executing the action'
+name: 'Kiuwan Local Analysis Action'
+author: 'Kiuwan & porrige51122'
+description: 'Run Kiuwan Local Analyzer in the repository executing the action'
 inputs:
   user:
     description: 'Kiuwan Username'

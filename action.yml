@@ -36,8 +36,8 @@ outputs:
     description: 'Return code of the execution of kiuwan'
 
 branding:
-  color: 'green'
-  icon: 'code'
+  color: 'blue'
+  icon: 'crosshair'
 
 runs:
   using: 'docker'

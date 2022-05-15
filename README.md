@@ -26,7 +26,7 @@ steps:
       - name: Checkout the repository
         uses: actions/checkout@v1
       - name: Kiuwan Local Analysis
-        uses: porrige51122/KiuwanLocalAnalysisAction@v1.3
+        uses: porrige51122/Kiuwan-Local-Analysis-Action@v1.2
         with:
           # (REQUIRED) Username for Kiuwan
           # Recommended to use GitHub secrets to prevent account leaks

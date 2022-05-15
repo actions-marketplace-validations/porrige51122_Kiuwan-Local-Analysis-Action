@@ -21,7 +21,7 @@ Therefore please check the source code and use this action sensibly to prevent a
 
 ## Example Usage
 
-```
+```YAML
 steps:
       - name: Checkout the repository
         uses: actions/checkout@v1
@@ -65,12 +65,12 @@ steps:
 Passwords stored in github secrets with special characters such as "$", are not well propagated and will cause errors.
 
 You can escape the character in the github secret to solve this issue e.g:
-```
+```sh
 pas$word
 ```
 to
-```
-pas\\$word
+```sh
+pas\$word
 ```
 
 ## Acknowledgments

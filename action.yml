@@ -5,11 +5,9 @@ inputs:
   user:
     description: 'Kiuwan Username'
     required: true
-    default: ''
   pass:
     description: 'Kiuwan Password'
     required: true
-    default: ''
   source_path:
     description: 'Directory with the code to analyze'
     required: false
@@ -17,7 +15,6 @@ inputs:
   software_name:
     description: 'Name of the target application'
     required: true
-    default: ''
   domain_id:
     description: 'Domain identifier to use when authenticating'
     required: false

@@ -24,7 +24,7 @@ Therefore please check the source code and use this action sensibly to prevent a
 ```YAML
 steps:
       - name: Checkout the repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Kiuwan Local Analysis
         uses: porrige51122/Kiuwan-Local-Analysis-Action@v1.2
         with:

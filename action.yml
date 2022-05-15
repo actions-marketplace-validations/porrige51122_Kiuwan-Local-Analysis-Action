@@ -11,7 +11,7 @@ inputs:
   source_path:
     description: "Directory with the code to analyze"
     required: false
-    default: "."
+    default: ${{ github.workspace }}
   software_name:
     description: "Name of the target application"
     required: true

@@ -35,8 +35,15 @@ def main():
 
 def execute_command(cmd):
     print(f"Executing: {cmd}")
-    output = os.system(cmd)
-    return os.waitstatus_to_exitcode(output)
+    status = os.system(cmd)
+    if os.WIFSIGNALED(status):
+        return -os.WTERMSIG(status)
+    elif os.WIFEXITED(status):
+        return os.WEXITSTATUS(status)
+    elif os.WIFSTOPPED(status):
+        return -os.WSTOPSIG(status)
+    else:
+        raise Exception("Error with return code statement")
 
 
 def build_kla_parameters():

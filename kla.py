@@ -49,12 +49,12 @@ def execute_command(cmd):
 def build_kla_parameters():
     print("Building parameters...")
     cmd_parameters = ""
-    filter = "[^a-zA-Z0-9_!@#%*-]"
+    filter = "[^a-zA-Z0-9_!@#:%*-]"
     for param in INPUT_PARAMS:
         try:
             env = re.sub(filter, "", os.environ[f"INPUT_{param[0]}"])
             if env != "":
-                cmd_parameters += f"{param[1]} {env}"
+                cmd_parameters += f" {param[1]} {env}"
         except KeyError:
             pass
     return cmd_parameters

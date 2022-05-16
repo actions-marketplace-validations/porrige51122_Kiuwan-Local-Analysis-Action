@@ -59,7 +59,7 @@ def test_kla_parameters_stops_parameter_injection():
     for var in INPUT_PARAMS:
         set_env_var(var, "")
     set_env_var("INPUT_USER", "user && echo 'Hello from hacker'; echo 'sudo'")
-    assert build_kla_parameters() == "--user userechoHellofromhackerechosudo"
+    assert build_kla_parameters() == " --user userechoHellofromhackerechosudo"
     set_env_var("INPUT_USER", "")
 
 

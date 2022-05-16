@@ -24,9 +24,9 @@ INPUT_PARAMS = [
 def main():
     print_custom_title()
     kla_url = "https://www.kiuwan.com/pub/analyzer/KiuwanLocalAnalyzer.zip"
-    output_dir = "./tmp"
-    agent = f"{output_dir}/KiuwanLocalAnalyzer/bin/agent.sh"
-    download_and_extract_file(kla_url, output_dir)
+    tmp_output_dir = os.environ["WORKSPACE"] + "/tmp"
+    agent = f"{tmp_output_dir}/KiuwanLocalAnalyzer/bin/agent.sh"
+    download_and_extract_file(kla_url, tmp_output_dir)
     os.chmod(agent, 0x777)
     cmd_params = build_kla_parameters()
     return_code = execute_command(f"{agent} {cmd_params}")
